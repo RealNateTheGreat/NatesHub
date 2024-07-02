@@ -35,7 +35,7 @@ local Success, Response = pcall(function()
 end)
 
 if not Success then
-	warn("\nNates Hub - Failed to load Feather Icons. Error code: " .. Response .. "\n")
+	warn("\nNates Library - Failed to load Feather Icons. Error code: " .. Response .. "\n")
 end	
 
 local function GetIcon(IconName)
@@ -225,7 +225,7 @@ local function LoadCfg(Config)
 				end    
 			end)
 		else
-			warn("Nates Hub Config Loader - Could not find ", a ,b)
+			warn("Nates Library Config Loader - Could not find ", a ,b)
 		end
 	end)
 end
@@ -471,7 +471,7 @@ function OrionLib:MakeWindow(WindowConfig)
 	local UIHidden = false
 
 	WindowConfig = WindowConfig or {}
-	WindowConfig.Name = WindowConfig.Name or "Nates Hub"
+	WindowConfig.Name = WindowConfig.Name or "Nates Library"
 	WindowConfig.ConfigFolder = WindowConfig.ConfigFolder or WindowConfig.Name
 	WindowConfig.SaveConfig = WindowConfig.SaveConfig or false
 	WindowConfig.HidePremium = WindowConfig.HidePremium or false
